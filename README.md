@@ -4,13 +4,9 @@
 
 A Mac app that keeps my three Gmail inboxes and Google Calendars in one place, as a desktop app of its own, outside Chrome.
 
-<p align="center">
-  <img src="images/personal.gif" width="120" alt="A man dancing in pyjamas">
-  <img src="images/aim.gif" width="120" alt="A cartoon rocket flying past the Earth">
-  <img src="images/farmkind.gif" width="120" alt="A piglet being stroked">
-</p>
+<p align="center"><img src="images/screenshot.png" width="640" alt="MailSmüsh's sidebar and Dock icon, with labels: one icon per Google account, its unread count, Gmail and Calendar buttons, and the hedgehog app icon in the Dock"></p>
 
-Each account gets its own animated icon in the sidebar. Those are mine, for my personal, AIM and FarmKind accounts.
+Each account gets its own icon in the sidebar. The gifs are mine, for my personal, AIM and FarmKind accounts: you pick your own when you set it up.
 
 ## What it does
 
