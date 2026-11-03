@@ -1,0 +1,36 @@
+{
+  "name": "mailsmush",
+  "version": "1.0.0",
+  "description": "Your Gmail inboxes and Google Calendars in one Mac app, outside Chrome",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . MailSmush --platform=darwin --out=dist --asar --overwrite --icon=images/icon.icns"
+  },
+  "author": "Aidan Alexander",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.mailsmush.app",
+    "productName": "MailSmüsh",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dir",
+      "icon": "images/icon.png",
+      "identity": null
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "images/**/*"
+    ]
+  },
+  "dependencies": {
+    "keytar": "^7.9.0"
+  }
+}
