@@ -22,7 +22,7 @@ Each account gets its own icon in the sidebar. The gifs are mine, for my persona
 Mac only. The easiest way is to let Claude Code do it: paste this into Claude Code (the Code tab of the Claude desktop app).
 
 ```
-Set up MailSmüsh for me. Fetch https://raw.githubusercontent.com/Aidan-Alexander/mailsmush/main/SETUP.md exactly as written (e.g. with curl) and follow it.
+Set up MailSmüsh for me: clone https://github.com/Aidan-Alexander/mailsmush to ~/MailSmush-source (or git pull there if it's already there), then follow SETUP.md in that folder.
 ```
 
 Claude checks your Mac has what it needs, asks which Google accounts you want and which picture or gif to use for each, then builds the app and puts it in your Applications folder. It takes about 10 minutes, most of it waiting. Then you open MailSmüsh and sign in to each account once.

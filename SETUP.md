@@ -9,7 +9,7 @@ You're setting up MailSmüsh for the person you're working with: a Mac app that 
 
 ## 2. Get the code
 
-The source lives in `~/MailSmush-source`.
+The source lives in `~/MailSmush-source`. The setup line usually asks you to clone or update it before you read this file, so it may already be there and up to date.
 - If that folder doesn't exist, get the code: `git clone https://github.com/Aidan-Alexander/mailsmush.git ~/MailSmush-source`. If git isn't available, download https://github.com/Aidan-Alexander/mailsmush/archive/refs/heads/main.zip and unzip it to that folder instead.
 - If it exists and has `renderer/accounts.js`, this is an update. Their accounts file and any pictures they added are theirs: keep them. Bring in the latest code (`git pull` in that folder, or replace everything else from the zip), then skip to step 5.
 
