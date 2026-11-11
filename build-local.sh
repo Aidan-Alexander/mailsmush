@@ -14,6 +14,21 @@ rsync -a --delete \
   --exclude='dist' \
   "$DRIVE_SRC/" "$BUILD_DIR/"
 
+# Their own app icon, if they chose one: images/custom-icon.png (a square PNG, kept out of git).
+# Swapped in here in the build copy only, so the hedgehog files in the source stay as they are.
+if [ -f "$BUILD_DIR/images/custom-icon.png" ]; then
+  echo "==> Using your own app icon..."
+  ICONSET="$BUILD_DIR/icon.iconset"
+  rm -rf "$ICONSET"; mkdir "$ICONSET"
+  for s in 16 32 128 256 512; do
+    sips -z $s $s "$BUILD_DIR/images/custom-icon.png" --out "$ICONSET/icon_${s}x${s}.png" >/dev/null
+    sips -z $((s*2)) $((s*2)) "$BUILD_DIR/images/custom-icon.png" --out "$ICONSET/icon_${s}x${s}@2x.png" >/dev/null
+  done
+  iconutil -c icns "$ICONSET" -o "$BUILD_DIR/images/icon.icns"
+  sips -z 1024 1024 "$BUILD_DIR/images/custom-icon.png" --out "$BUILD_DIR/images/icon.png" >/dev/null
+  rm -rf "$ICONSET"
+fi
+
 echo "==> Installing dependencies..."
 cd "$BUILD_DIR"
 npm install --prefer-offline 2>&1 | tail -5

@@ -1,6 +1,7 @@
 node_modules/
 dist/
 renderer/accounts.js
+images/custom-icon.png
 .DS_Store
 # old images the app no longer uses
 images/aim.jpeg
